@@ -1,0 +1,100 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8x]{inputenc}
+
+%opening
+\title{Sana Clinician's Guide}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\section{Client User Guide: Clinicians}
+Targeted at a clinician who does not need to manage the information system. The guide will walk through the transfer of a paper-based medical questionaire into a format usable on a Sana mobile client. 
+
+\subsection{Types of Input Available}
+Element type, description, image, Cut+paste XML sample  (HIGHLIGHT AREAS TO BE CHANGED)
+------------------------------------------------------
+Text data,  
+Single choice,  
+Multi choice,  
+Images,
+
+Note: See the Advanced Content Creation Guide for more details and assitance. 
+
+\subsection{Medical Decision Trees}
+Blurb about what they are, and how to use them.
+
+- If, then logic
+If/then logic is a way of choosing to display or not display certain questions based on previous questions. 
+{IMAGE: History of smkoking? T/F} BRANCH T-> {IMAGE: Take an image of your mouth} 
+				  BRANCH F-> {IMAGE: History of drinking?}
+XML Code sample
+
+- Comparison operators
+Comparison operators are a more powerful way of using if/then logic. Rather than only checking for a simple equality, we can compare an input value to another pre-set value. 
+
+{IMAGE: What is your age?} ->  {IMAGE: WHat is your BP?} IF > 40  AND BP > 120 {IMAGE: You are at risk for Blah}
+									       {IMAGE: Your risk is minimal}
+
+\subsection{Translating Document}
+Based on the information above, a significant number of decision trees can be tranlated into XML docuemnts. 
+
+Example: Side by side, color coded for each question
+{IMAGE: Decisions tree with nodes}  ->  {IMAGE: XML code}
+
+
+\subsection{Get Content to Phone}
+Upload it to a webserver 
+{IMAGE: Webpage that has 3 XML docs}
+
+Note: You may want to talk with an IT expert if unsure how/where you can upload a document to the web.
+
+Browse to the location on your phone.
+{IMAGE: Same webpage on a phone}
+
+Download the form to your phone.
+{IMAGE: Select a form --highlight it}
+
+Move the form to directory
+{IMAGE: Mobile phone with the file browser open to a given directory}
+
+Load form into the Sana App
+{IMAGE: Splash with menu and settings visible}
+{IMAGE: First settings page, higlight Sana Resources}
+{IMAGE: Second settings page, highlight}
+
+\subsection{Setup Server with Sana Components}
+Consult with someone who can setup the server for you, or consult the System Administrator Guide if settign up yourself. 
+
+\subsection{Collect Data in the Field}
+Clinical health workers in the field will now collect field data using your cusotm procedure, and the logic in the decision trees. 
+
+Note: If you're unsure of how to install or use the mobile client, see the Client User Guide.
+
+\subsection{Manage Patient Encounters}
+Login to your server using your account.
+
+Login to OpenMRS and navigate to the Sana Queue.
+{IMAGE: Screenshot of Sana Queue}
+
+You should see data collected using the forms you just built.
+{IMAGE: Show one upladed of the same type that we did with the ``Getting content to phone'' section}
+
+This will launch a screen for you to review the data and respond to your healthcare worker.
+{IMAGE: Sana mediaviewer page}
+
+Review patient data to determine diagnois or request additional ingformation from the worker. 
+{IMAGE: SEnd with diagnois information} {IMAGE: HIGHLIGHT a ``take a picture of patient's foot'' message}
+
+Note: Notification will be returned to the phone. If you need more information about the notifivcation process, speak to your sys admin. 
+
+\clearpage{}
+
+
+
+\end{document}
