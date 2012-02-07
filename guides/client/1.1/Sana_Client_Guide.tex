@@ -31,7 +31,7 @@ concerned please check your phone manufacturers specs against the following.
 
 \begin{tabular}{ l l }
 Hardware&Android phone running 1.6 or later. \\
-Software&None but the Sana app.(Instructions for download are below}
+Software&None but the Sana app.(Instructions for download are below
 \end{tabular}
 
 \newpage
@@ -56,25 +56,57 @@ sana-release-1.1.apk file.
 \subsubsection{Installing}
 \noindent Once downloaded, select your downloads notificiations. 
 
-\begin{tabular}{ c c c c }
-\includegraphics[scale=0.2,keepaspectratio=true]{client_download_notification.png}
-&\includegraphics[scale=0.2,keepaspectratio=true]{client_download_notification_expanded.png}
-&\includegraphics[scale=0.2,keepaspectratio=true]{client_install_confirmation.png}
-&\includegraphics[scale=0.2,keepaspectratio=true]{sana_splash.png}
+\begin{flushleft}
+\begin{tabular}{ c c c c c }
+\includegraphics[scale=0.15,keepaspectratio=true]{client_download_notification.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_download_notification_expanded.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_install_confirmation.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{install_complete.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{sana_splash.png}
 \end{tabular}
+\end{flushleft}
 
 \noindent Once installation is complete, press the back button and the Sana app
 should start. 
 \newpage
 
-\subsection{Try an App}
-Sample exam, very generic
+\subsection{Try an App}This section shows a few screenshots from a simple 
+procedure which will allow you to collect a few pieces of data and upload them
+to the Sana demo server. The application must first have the sample procedures 
+loaded. Starting with the main Sana screen visible, press the menu button on 
+your phone and walk through the following steps:
+
+\begin{flushleft}
+\begin{tabular}{ c c c c }
+\includegraphics[scale=0.15,keepaspectratio=true]{sana_splash_load_db.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{sana_splash_load_db_confirm.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{sana_splash_new_encounter.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_select_procedure.png}
+\end{tabular}
+\end{flushleft}
+
+\paragraph{Select and Run}Sample exam, very generic
  - Name, Gender, height, weight, age, Family history of cholestoral? Y/N, Have 
 you experienced discomfort in your foot in the past week? once, couple times, 
 many times, Image of foot
 
-Note: Navigation through the procedures happens with the ``next'' button at the 
-bottom of the screen.
+\paragraph{Navigating through a procedure}Navigation through the procedures 
+happens with the ``next'' button at the bottom of the screen. The following
+images display a small sample of the available steps you will encounter as you
+navigate the sample encounters.
+
+\begin{flushleft}
+\begin{tabular}{ c c c c }
+\includegraphics[scale=0.15,keepaspectratio=true]{client_proc_pt_id.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_proc_pt_first.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_proc_pt_last.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_proc_pt_dob.png} \\
+\includegraphics[scale=0.15,keepaspectratio=true]{client_proc_pt_gender.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_proc_pt_picture.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_proc_done.png}
+&\includegraphics[scale=0.15,keepaspectratio=true]{client_proc_menu.png}
+\end{tabular}
+\end{flushleft}
 \newpage
 
 \subsection{Connect to Database}
@@ -86,8 +118,12 @@ enabled device, open a browser and enter:
 \url{https://demo.sana.csail.mit.edu/openmrs/index.htm}
 \end{center}
 
+\begin{flushleft}
+\begin{tabular}{ c c }
 \includegraphics[scale=0.25,keepaspectratio=true]{openmrs_login.png}
-\includegraphics[scale=0.25,keepaspectratio=true]{openmrs_login_success_sana_tab.png}
+&\includegraphics[scale=0.25,keepaspectratio=true]{openmrs_login_success_sana_tab.png}
+\end{tabular}
+\end{flushleft}
 
 Username: guest, Password: Sanamobile1
 
@@ -96,8 +132,12 @@ Username: guest, Password: Sanamobile1
 visible in your browser.Click the queue of pending cases(Sana tab highlighted 
 above.) Select your encounter and view it.
 
+\begin{flushleft}
+\begin{tabular}{ c c }
 \includegraphics[scale=0.25,keepaspectratio=true]{openmrs_sana_queue.png}
-\includegraphics[scale=0.25,keepaspectratio=true]{openmrs_sana_encounter.png}
+&\includegraphics[scale=0.25,keepaspectratio=true]{openmrs_sana_encounter.png}
+\end{tabular}
+\end{flushleft}
 
 For an actual patient encounter, reviewing clinicians would append information 
 to the encounter-diagnosis, request for additional information, comments, etc.
