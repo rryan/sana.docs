@@ -1,0 +1,80 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{Sana Terminology v1.x}
+\author{Sana}
+
+
+\begin{document}
+\section{Terminology}
+Terminology used in the Sana platform.  
+
+\subsection{General}
+The following terms define the terms which are used throughout the Sana 
+documentation to describe the process of data collection.
+\begin{description}
+ \item[Subject] Who or what data is collected about 
+ \item[Worker] An entity that collects data about a subject
+ \item[Instruction] Provides context for a single instance of data collection. 
+ \item[Procedure] A set of one or more instructions to be executed.
+ \item[Observation] The data collected as a result of executing an instruction.
+ \item[Encounter] A set of one or more observations which are collected during
+ the execution of a Procedure.
+ \item[Concept] A functional unit of meaning. Provide context to data that is
+ collected.
+ \item[Ontology] The collective set of concepts which provide meaning within
+ the domain in which data is collected.
+ \item[UUID] A universally unique identifier.
+\end{description}
+
+\subsection{Medical}
+The following terms are extensions of the more general terminology and 
+\begin{description}
+ \item[Patient] A subject about whom medical data is collected.
+ \item[Clinical Health Worker, CHW] The entity which executes the intructions.
+ \item[SavedProcedure] A synonym for \textbf{Encounter}.
+\end{description}
+
+\subsection{Procedure Mark Up} 
+The following terms are the XML node tags and atttributes used when implementing
+a \textbf{Procedure} as an XML formatted document. Attributes which are optional
+are noted as such. Please see the \textbf{Clinician Guide} for full details of 
+use.
+\begin{description}
+ \item [Procedure] Marks the beginning of a \textbf{Procedure}.
+  \begin{description}
+   \item[title] A descriptive name.
+   \item[author] Who wrote the document.
+   \item[uuid(Optional)] The id of the document.
+   \item[version(Optional)] Distinguishes different versions of a protocol.
+  \end{description}  
+ \item [Page] Marks a set of one or more instructions which are viewed 
+ collectively on a single page.
+ \item[ShowIf] The entry point for branching logic which must logically 
+ evaluate to true for a Page to be displayed.
+ \item[Criteria] An expression which will yield a logical truth value when
+ evaluated.
+  \begin{description}
+   \item[id] The id of the node to be used for comparison.
+   \item[type] The type of comparison operator.
+   \item[value] A value to compare against.
+  \end{description}  
+ \item[and] Logical conjunction between two or more \textbf{Criteria}.
+ \item[or] Logical disjunction between two or more \textbf{Criteria}.
+ \item[not] Logical negation of the result of a simple or compound 
+ \textbf{Criteria}. 
+ \item [Element] A single \textbf{Instruction} node.
+  \begin{description}
+   \item[id] A unique identifier within the \textbf{Procedure}. The value is an
+   arbitrary string but should limited to alphanumeric characters with no
+   whitespace. 
+   \item[type] A classification of the visual element to use.
+   \item[concept] A term which provides context for the instruction.
+   \item[question] The id of the document.
+   \item[answer] A default value for the collected data.
+   \item[choices] A  comma separated list of one or more options to choose from.
+   Required for SELECT, RADIO, MULTI_SELECT.
+  \end{description}  
+\end{description}
+\end{document}
